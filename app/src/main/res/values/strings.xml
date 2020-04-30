@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Card Manager</string>
+    <string name="title_activity_login">login</string>
+    <string name="fingerprint_message">Place your fingertip on the scanner to verify fingerprint.</string>
+    <string name="successful_message">You have successfully authenticated with FingerPrint.</string>
+    <string name="fingerprint_not_exist">Your Device does not have a Fingerprint Sensor.</string>
+    <string name="fingerprint_not_enabled">Fingerprint authentication permission not enabled in your device.</string>
+    <string name="fingerprint_not_registered">Register at least one fingerprint in Settings to make work Fingerprint.</string>
+    <string name="lock_screen_setting_disabled">Lock screen security not enabled in Settings.</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string-array name="textfield">
+        <item>Aadhar Card Number:</item>
+        <item>Pan Card Number:</item>
+        <item>Ration Card:</item>
+        <item>Voter Id Card:</item>
+        <item>D2 Card:</item>
+        <item>Card:</item>
+
+    </string-array>
+
+</resources>

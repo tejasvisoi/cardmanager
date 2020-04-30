@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/dialog_bg"
+    >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/gothammedium"
+        android:text="Add a card"
+        android:textColor="#000"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="88dp"
+        android:paddingLeft="10dp"
+
+        android:cursorVisible="true"
+        android:textSize="16dp"
+        android:paddingStart="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangledialog"
+        android:fontFamily="@font/gothambook"
+        android:hint="Enter Card Name"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:paddingStart="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/gothambook"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangledialog"
+        android:hint="Enter Card Number"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/upload"
+        android:fontFamily="@font/gothammedium"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/item_image"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:id="@+id/added"
+        android:layout_marginBottom="32dp"
+        android:text="*Added Successfully "
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/but"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/upload" />
+
+    <Button
+        android:id="@+id/but"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button3"
+        android:elevation="15dp"
+        android:fontFamily="@font/gotham"
+        android:shadowColor="#000"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

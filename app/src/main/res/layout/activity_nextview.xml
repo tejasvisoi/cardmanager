@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Dialog"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:id="@+id/item_image1"
+        android:layout_width="353dp"
+        android:layout_height="489dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="Card Details"
+        android:contextClickable="true"
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/button3"
+        android:text="@string/back"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_image1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".main">
+
+    <ImageView
+        android:id="@+id/fingerprint_logo"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_above="@+id/fingerprint_message"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/fingerprint" />
+
+    <TextView
+        android:id="@+id/fingerprint_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="@string/fingerprint_message"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <!--  TextView to show any error message  -->
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fingerprint_message"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="282dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/Cursor"
+        android:textSize="14sp" />
+</RelativeLayout>
