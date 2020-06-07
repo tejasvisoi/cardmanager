@@ -49,7 +49,7 @@ public class CardDemoActivity extends Activity {
     RecyclerView.LayoutManager layoutManager;
     RecyclerAdapter madapter;
     private Button buttonInsert;
-    Button delete,upload,save;
+    Button delete,upload;
     ImageView imageView;
     TextView display,added;
     String selectedImage;
@@ -64,7 +64,6 @@ public class CardDemoActivity extends Activity {
         getTimeFromAndroid();
         tv=findViewById(R.id.hello);
         buildRecyclerView();
-        save=findViewById(R.id.button3);
         onButtons();
         EditText editText = findViewById(R.id.search);
         editText.addTextChangedListener(new TextWatcher() {
@@ -88,13 +87,6 @@ public class CardDemoActivity extends Activity {
             public void onClick(View v) {
                 showDialog(CUSTOM_DIALOG_ID);
         }
-        });
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               saveData();
-
-            }
         });
     }
     private void filter(String text) {
@@ -166,11 +158,11 @@ public class CardDemoActivity extends Activity {
         Date dt = new Date();
         int hours = dt.getHours();
         int min = dt.getMinutes();
-        if(hours>=1 && hours<=12){
+        if(hours>=0 && hours<=12){
             display.setText("Hi, Good Morning");
-        }else if(hours>=12 && hours<=16){
+        }else if(hours>12 && hours<=18){
             display.setText("Hi, Good Afternoon");
-        }else if(hours>=16 && hours<=24){
+        }else if(hours>18 && hours<=24){
             display.setText("Hi, Good Evening");
         }
     }
@@ -195,7 +187,6 @@ public class CardDemoActivity extends Activity {
             else if(!name.isEmpty() && !number.isEmpty()) {
                 position = exampleList.size();
                 exampleList.add(position, new ExampleItem(selectedImage , name.toUpperCase(), number.toUpperCase()));
-
                 customDialog_EditText1.setText("");
                 customDialog_EditText2.setText("");
                 madapter.notifyItemInserted(position);
@@ -233,6 +224,11 @@ public class CardDemoActivity extends Activity {
 
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        saveData();
+    }
 
     @Override
     public void onBackPressed() {
